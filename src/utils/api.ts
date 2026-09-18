@@ -62,12 +62,6 @@ export async function getMovieGenres(): Promise<{ id: number; name: string }[]> 
   return data.genres;
 }
 
-/* ─── 7. API MORE (CUSTOM) ─── */
-export async function getMoreData(): Promise<Movie[]> {
-  const data = await fetchFromTMDB<TMDBResponse<Movie>>("/trending/movie/day?language=en-US");
-  return data.results;
-}
-
 export async function getMoreDetails(id: string): Promise<More> {
   return fetchFromTMDB<More>(`/movie/${id}?language=en-US`);
 }
