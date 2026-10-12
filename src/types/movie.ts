@@ -19,6 +19,7 @@ export interface Movie {
   vote_average: number;
   vote_count: number;
   adult: boolean;
+  rating: number;
   backdrop_path_url?: string; // custom helper jika Anda memproses URL penuh
 }
 
